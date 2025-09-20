@@ -39,7 +39,21 @@
     html{scroll-behavior:smooth}
     .section-divider{position:relative;padding-bottom:.5rem;margin-bottom:1.25rem}
     .section-divider::after{content:"";position:absolute;left:0;bottom:0;width:4rem;height:3px;background:linear-gradient(90deg,#1E5A7C,#3A88A5)}
-    .hero-bg::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 20%,rgba(30,90,124,.15),transparent),linear-gradient(#FAF5EB,#FFFFFF 60%);z-index:-1}
+    .hero-bg{position:relative;overflow:hidden}
+    .hero-bg::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-color:#e7eef5;
+      background-image:url('assets/images/hero/luxury-bathroom.png');
+      background-position:center;
+      background-size:cover;
+      background-repeat:no-repeat;
+      filter:blur(3px);
+      transform:scale(1.04);
+      z-index:-2
+    }
+    .hero-bg::after{content:"";position:absolute;inset:0;background:rgba(250,245,235,0.4);backdrop-filter:blur(1px);z-index:-1}
     .glass{backdrop-filter:saturate(1.4) blur(8px);background:rgba(255,255,255,0.68)}
     .accordion[aria-expanded="true"] + .panel{max-height:320px}
     .panel{max-height:0;overflow:hidden;transition:max-height .35s ease}
@@ -77,9 +91,7 @@
   <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary grid place-items-center text-white shadow">
-          <i class="fa-solid fa-faucet-drip"></i>
-        </div>
+        <img src="assets/images/logo/fastmove-plumbing-logo.png" alt="Fastmove Plumbing logo" class="w-12 h-12 rounded-full shadow border border-white/60">
         <div class="leading-tight">
           <div class="font-heading font-semibold tracking-tight text-slate-900">FASTMOVE <span class="font-narrow tracking-wide text-primary">PLUMBING</span></div>
           <div class="text-xs text-slate-500">Pietermaritzburg • 24/7</div>
@@ -136,11 +148,11 @@
           <div class="glass rounded-2xl p-6 shadow-card">
             <h3 class="font-heading text-xl text-highlight">Emergency Call‑out</h3>
             <p class="text-sm text-slate-600">Short form for urgent jobs. We’ll call you back ASAP.</p>
-            <form class="mt-4 grid gap-3" method="get" action="#">
-              <input class="px-3 py-2 rounded-lg border border-slate-300" name="name" placeholder="Full Name" />
-              <input class="px-3 py-2 rounded-lg border border-slate-300" name="phone" placeholder="Phone" />
-              <input class="px-3 py-2 rounded-lg border border-slate-300" name="address" placeholder="Address" />
-              <select class="px-3 py-2 rounded-lg border border-slate-300" name="issue">
+            <form class="mt-4 grid gap-3" method="get" action="#" data-sms-intro="Emergency Call-out">
+              <input class="px-3 py-2 rounded-lg border border-slate-300" type="text" name="name" placeholder="Full Name" data-sms-label="Name" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" type="tel" name="phone" placeholder="Phone" data-sms-label="Phone" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" type="text" name="address" placeholder="Address" data-sms-label="Address" />
+              <select class="px-3 py-2 rounded-lg border border-slate-300" name="issue" data-sms-label="Issue">
                 <option value="">Issue</option>
                 <option>Burst pipe</option>
                 <option>No hot water</option>
@@ -148,7 +160,7 @@
                 <option>Leak</option>
                 <option>Other</option>
               </select>
-              <textarea class="px-3 py-2 rounded-lg border border-slate-300" rows="3" name="notes" placeholder="Describe the problem"></textarea>
+              <textarea class="px-3 py-2 rounded-lg border border-slate-300" rows="3" name="notes" placeholder="Describe the problem" data-sms-label="Notes"></textarea>
               <button class="inline-flex items-center justify-center gap-2 bg-primary text-white px-4 py-2 rounded-xl2 hover:bg-secondary" type="submit">
                 <i class="fa-regular fa-paper-plane"></i> Submit
               </button>
@@ -287,7 +299,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="section-divider font-heading text-3xl text-highlight">Book or Get a Quote</h2>
       <div class="mt-6 grid lg:grid-cols-2 gap-8">
-        <div class="space-y-3">
+        <div class="space-y-4">
+          <img src="assets/images/logo/fastmove-plumbing-logo.png" alt="Fastmove Plumbing" class="w-40 rounded-xl shadow-card border border-slate-200">
           <p class="text-slate-700"><i class="fa-solid fa-phone text-primary"></i> <a class="underline hover:text-primary" href="tel:+27790485777">+27 79 048 5777</a></p>
           <p class="text-slate-700"><i class="fa-brands fa-whatsapp text-primary"></i> <a class="underline hover:text-primary" href="https://wa.me/27790485777" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
           <p class="text-slate-700"><i class="fa-solid fa-envelope text-primary"></i> <a class="underline hover:text-primary" href="mailto:hello@fastmoveplumbing.co.za">hello@fastmoveplumbing.co.za</a></p>
@@ -295,12 +308,12 @@
         </div>
         <div>
           <div class="bg-white rounded-2xl p-6 shadow-card border border-slate-200">
-            <form class="grid gap-3" method="get" action="#">
-              <input class="px-3 py-2 rounded-lg border border-slate-300" id="full_name" name="full_name" placeholder="Full Name" />
-              <input class="px-3 py-2 rounded-lg border border-slate-300" id="phone" name="phone" placeholder="Phone" />
-              <input class="px-3 py-2 rounded-lg border border-slate-300" id="email" name="email" placeholder="Email" />
-              <input class="px-3 py-2 rounded-lg border border-slate-300" id="address" name="address" placeholder="Site Address" />
-              <select class="px-3 py-2 rounded-lg border border-slate-300" id="service" name="service">
+            <form class="grid gap-3" method="get" action="#" data-sms-intro="Quote Request">
+              <input class="px-3 py-2 rounded-lg border border-slate-300" id="full_name" name="full_name" placeholder="Full Name" type="text" data-sms-label="Name" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" id="phone" name="phone" placeholder="Phone" type="tel" data-sms-label="Phone" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" id="email" name="email" placeholder="Email" type="email" data-sms-label="Email" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" id="address" name="address" placeholder="Site Address" type="text" data-sms-label="Address" />
+              <select class="px-3 py-2 rounded-lg border border-slate-300" id="service" name="service" data-sms-label="Service">
                 <option value="">Select Service</option>
                 <option>Emergency Plumbing</option>
                 <option>Leak Detection</option>
@@ -311,7 +324,7 @@
                 <option>Water Tanks & Booster Pumps</option>
                 <option>Commercial Maintenance</option>
               </select>
-              <textarea class="px-3 py-2 rounded-lg border border-slate-300" id="details" name="details" rows="3" placeholder="Details"></textarea>
+              <textarea class="px-3 py-2 rounded-lg border border-slate-300" id="details" name="details" rows="3" placeholder="Details" data-sms-label="Details"></textarea>
               <button class="inline-flex items-center justify-center gap-2 bg-primary text-white px-4 py-2 rounded-xl2 hover:bg-secondary" type="submit">
                 <i class="fa-regular fa-paper-plane"></i> Submit
               </button>

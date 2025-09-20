@@ -1,0 +1,4 @@
+# Binary image assets are managed outside of git.
+assets/images/**/*.png
+assets/images/**/*.jpg
+assets/images/**/*.jpeg
