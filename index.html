@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fastmove Plumbing | 24/7 Plumbers in Pietermaritzburg — Geysers, Leaks, Drains</title>
+  <meta name="description" content="Registered plumbers offering emergency call-outs, leak detection, geysers, drain unblocking, and CoC in Pietermaritzburg. WhatsApp +27 79 048 5777." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Archivo+Narrow:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/script.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E5A7C',
+            secondary: '#3A88A5',
+            accent: '#FAF5EB',
+            highlight: '#1C2A33'
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'system-ui', 'sans-serif'],
+            narrow: ['Archivo Narrow', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            card: '0 8px 24px rgba(0,0,0,0.08)'
+          },
+          borderRadius: { xl2: '1rem' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    .section-divider{position:relative;padding-bottom:.5rem;margin-bottom:1.25rem}
+    .section-divider::after{content:"";position:absolute;left:0;bottom:0;width:4rem;height:3px;background:linear-gradient(90deg,#1E5A7C,#3A88A5)}
+    .hero-bg::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 20%,rgba(30,90,124,.15),transparent),linear-gradient(#FAF5EB,#FFFFFF 60%);z-index:-1}
+    .glass{backdrop-filter:saturate(1.4) blur(8px);background:rgba(255,255,255,0.68)}
+    .accordion[aria-expanded="true"] + .panel{max-height:320px}
+    .panel{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  </style>
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Fastmove Plumbing" />
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="Fastmove Plumbing — Fast. Reliable. 24/7." />
+  <meta property="og:description" content="Emergency repairs, leak detection, geysers, and drain unblocking across Pietermaritzburg." />
+  <meta property="og:image" content="/assets/og-cover-plumbing.jpg" />
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Fastmove Plumbing",
+    "url": "https://fastmoveplumbing.co.za",
+    "telephone": "+27-79-048-5777",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "19 Syndicate",
+      "addressLocality": "Pietermaritzburg",
+      "addressRegion": "KwaZulu-Natal",
+      "postalCode": "3201",
+      "addressCountry": "ZA"
+    },
+    "areaServed": "ZA-KZN",
+    "priceRange": "R",
+    "openingHours": "Mo-Su 00:00-24:00"
+  }
+  </script>
+</head>
+<body class="font-body text-slate-800 bg-accent">
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-secondary grid place-items-center text-white shadow">
+          <i class="fa-solid fa-faucet-drip"></i>
+        </div>
+        <div class="leading-tight">
+          <div class="font-heading font-semibold tracking-tight text-slate-900">FASTMOVE <span class="font-narrow tracking-wide text-primary">PLUMBING</span></div>
+          <div class="text-xs text-slate-500">Pietermaritzburg • 24/7</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a class="nav-link text-sm hover:text-primary" href="#services">Services</a>
+        <a class="nav-link text-sm hover:text-primary" href="#pricing">Pricing</a>
+        <a class="nav-link text-sm hover:text-primary" href="#gallery">Before/After</a>
+        <a class="nav-link text-sm hover:text-primary" href="#faqs">FAQs</a>
+        <a class="nav-link text-sm hover:text-primary" href="#areas">Areas</a>
+        <a class="nav-link text-sm hover:text-primary" href="#about">About</a>
+        <a class="inline-flex items-center gap-2 text-sm bg-primary text-white px-4 py-2 rounded-xl2 shadow hover:bg-secondary" href="https://wa.me/27790485777" target="_blank" rel="noopener">24/7 Emergency <i class="fa-brands fa-whatsapp text-base"></i></a>
+      </nav>
+      <button id="menuBtn" aria-label="Open menu" aria-controls="mnav" aria-expanded="false" class="md:hidden p-2 rounded hover:bg-slate-100">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+    <div id="mnav" class="md:hidden border-t border-slate-200 hidden">
+      <div class="px-4 py-3 grid gap-2 bg-white">
+        <a class="block py-2" href="#services">Services</a>
+        <a class="block py-2" href="#pricing">Pricing</a>
+        <a class="block py-2" href="#gallery">Before/After</a>
+        <a class="block py-2" href="#faqs">FAQs</a>
+        <a class="block py-2" href="#areas">Areas</a>
+        <a class="block py-2" href="#about">About</a>
+        <a class="inline-flex items-center justify-center gap-2 text-sm bg-primary text-white px-4 py-2 rounded-xl2 shadow" href="https://wa.me/27790485777" target="_blank" rel="noopener">WhatsApp Now<i class="fa-brands fa-whatsapp text-base"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="pt-28 pb-16 relative hero-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <h1 class="font-heading text-4xl sm:text-5xl font-bold leading-tight text-highlight">Fast. Reliable. 24/7.</h1>
+          <p class="mt-4 text-xl text-slate-700 max-w-2xl">Emergency plumbing, leak detection, geysers and drain unblocking across Pietermaritzburg.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://wa.me/27790485777" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-xl2 shadow hover:bg-secondary">
+              <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Now
+            </a>
+            <a href="#book" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl2 border border-primary text-primary hover:bg-primary/10">
+              <i class="fa-regular fa-calendar-check"></i> Request a Call‑out
+            </a>
+          </div>
+          <ul class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-badge-check text-primary"></i> Registered & Insured</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-file-circle-check text-primary"></i> CoC issued</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-stopwatch-20 text-primary"></i> Same‑day service</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="glass rounded-2xl p-6 shadow-card">
+            <h3 class="font-heading text-xl text-highlight">Emergency Call‑out</h3>
+            <p class="text-sm text-slate-600">Short form for urgent jobs. We’ll call you back ASAP.</p>
+            <form class="mt-4 grid gap-3" method="get" action="#">
+              <input class="px-3 py-2 rounded-lg border border-slate-300" name="name" placeholder="Full Name" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" name="phone" placeholder="Phone" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" name="address" placeholder="Address" />
+              <select class="px-3 py-2 rounded-lg border border-slate-300" name="issue">
+                <option value="">Issue</option>
+                <option>Burst pipe</option>
+                <option>No hot water</option>
+                <option>Blocked drain</option>
+                <option>Leak</option>
+                <option>Other</option>
+              </select>
+              <textarea class="px-3 py-2 rounded-lg border border-slate-300" rows="3" name="notes" placeholder="Describe the problem"></textarea>
+              <button class="inline-flex items-center justify-center gap-2 bg-primary text-white px-4 py-2 rounded-xl2 hover:bg-secondary" type="submit">
+                <i class="fa-regular fa-paper-plane"></i> Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">Our Services</h2>
+      <p class="text-lg text-slate-700 max-w-3xl">Emergency & routine plumbing with transparent pricing and clean workmanship.</p>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="service-card p-6 bg-accent rounded-2xl shadow-card"><i class="fa-solid fa-triangle-exclamation text-primary text-2xl"></i><h3 class="mt-3 font-heading text-xl text-highlight">24/7 Emergency</h3><p class="text-slate-700 text-sm">Burst pipes, overflows, major leaks. Rapid dispatch.</p></article>
+        <article class="service-card p-6 bg-accent rounded-2xl shadow-card"><i class="fa-solid fa-magnifying-glass-location text-primary text-2xl"></i><h3 class="mt-3 font-heading text-xl text-highlight">Leak Detection</h3><p class="text-slate-700 text-sm">Acoustic & tracer methods to find hidden leaks.</p></article>
+        <article class="service-card p-6 bg-accent rounded-2xl shadow-card"><i class="fa-solid fa-toilet text-primary text-2xl"></i><h3 class="mt-3 font-heading text-xl text-highlight">Drain Unblocking</h3><p class="text-slate-700 text-sm">Kitchen/bathroom blockages cleared with auger/jetting.</p></article>
+        <article class="service-card p-6 bg-accent rounded-2xl shadow-card"><i class="fa-solid fa-shower text-primary text-2xl"></i><h3 class="mt-3 font-heading text-xl text-highlight">Geysers</h3><p class="text-slate-700 text-sm">Repairs & replacements to SANS specs. CoC where needed.</p></article>
+        <article class="service-card p-6 bg-accent rounded-2xl shadow-card"><i class="fa-solid fa-sink text-primary text-2xl"></i><h3 class="mt-3 font-heading text-xl text-highlight">Bathrooms & Kitchens</h3><p class="text-slate-700 text-sm">Taps, toilets, mixers, showers, renovations.</p></article>
+        <article class="service-card p-6 bg-accent rounded-2xl shadow-card"><i class="fa-solid fa-gauge-high text-primary text-2xl"></i><h3 class="mt-3 font-heading text-xl text-highlight">Pipes, PRVs & Valves</h3><p class="text-slate-700 text-sm">Copper/PEX runs, pressure reducing valves, NRVs.</p></article>
+        <article class="service-card p-6 bg-accent rounded-2xl shadow-card"><i class="fa-solid fa-tank-water text-primary text-2xl"></i><h3 class="mt-3 font-heading text-xl text-highlight">Tanks & Pumps</h3><p class="text-slate-700 text-sm">Tank install, booster pumps, filtration & changeover.</p></article>
+        <article class="service-card p-6 bg-accent rounded-2xl shadow-card"><i class="fa-solid fa-building text-primary text-2xl"></i><h3 class="mt-3 font-heading text-xl text-highlight">Commercial Maintenance</h3><p class="text-slate-700 text-sm">SLAs for shops, offices & bodies corporate.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing / Packages -->
+  <section id="pricing" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">Transparent Pricing</h2>
+      <p class="text-lg text-slate-700 max-w-3xl">Standard call‑out from R350. After‑hours surcharge 50%. Labour R420/hr. Materials at cost + 15%.</p>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="pricing-card p-6 bg-white rounded-2xl shadow-card border border-slate-200">
+          <div class="font-heading text-xl text-highlight">Standard Drain Clear</div>
+          <div class="mt-1 text-2xl font-semibold text-primary">R850</div>
+          <p class="mt-2 text-sm text-slate-700">Manual auger up to 10m, trap clean, flow test.</p>
+          <p class="mt-1 text-xs text-slate-500">Jetting/camera billed separately.</p>
+        </div>
+        <div class="pricing-card p-6 bg-white rounded-2xl shadow-card border border-slate-200">
+          <div class="font-heading text-xl text-highlight">Geyser Element & Thermostat</div>
+          <div class="mt-1 text-2xl font-semibold text-primary">R1 650</div>
+          <p class="mt-2 text-sm text-slate-700">New element + thermostat, isolation & drain, drip tray check.</p>
+        </div>
+        <div class="pricing-card p-6 bg-white rounded-2xl shadow-card border border-slate-200">
+          <div class="font-heading text-xl text-highlight">Leak Detection Survey</div>
+          <div class="mt-1 text-2xl font-semibold text-primary">R1 200</div>
+          <p class="mt-2 text-sm text-slate-700">Pressure test, acoustic/tracer, report & photo evidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Gallery (placeholder tiles) -->
+  <section id="gallery" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">Before & After</h2>
+      <p class="text-lg text-slate-700 max-w-3xl">Real jobs in PMB. Swap these tiles for your photos later.</p>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="aspect-video rounded-2xl bg-slate-200 grid place-items-center text-slate-500">Burst → Repair</div>
+        <div class="aspect-video rounded-2xl bg-slate-200 grid place-items-center text-slate-500">Blocked → Clear</div>
+        <div class="aspect-video rounded-2xl bg-slate-200 grid place-items-center text-slate-500">Old Geyser → New</div>
+        <div class="aspect-video rounded-2xl bg-slate-200 grid place-items-center text-slate-500">Leaking Trap → Fixed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">What Clients Say</h2>
+      <div class="mt-6 bg-white rounded-2xl shadow-card p-6">
+        <div id="tslide" class="text-slate-700">
+          <p class="text-lg">“They arrived at night within an hour, fixed our burst pipe, and cleaned up properly. Highly recommend.”</p>
+          <div class="mt-3 flex items-center gap-2"><span class="font-medium">S. Khumalo</span><span class="text-slate-500">• Hayfields</span><span class="text-yellow-500"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">Frequently Asked Questions</h2>
+      <div class="mt-6 divide-y divide-slate-200">
+        <button class="accordion w-full text-left py-4 font-medium" aria-expanded="false">How do call‑out fees work?</button>
+        <div class="panel"><p class="pb-4 text-slate-700">Within PMB, a standard call‑out covers the first 30 minutes of diagnosis. Repairs are quoted before proceeding.</p></div>
+        <button class="accordion w-full text-left py-4 font-medium" aria-expanded="false">Do you charge after hours?</button>
+        <div class="panel"><p class="pb-4 text-slate-700">Yes. After‑hours/holidays carry a 50% surcharge to cover rapid response and overtime.</p></div>
+        <button class="accordion w-full text-left py-4 font-medium" aria-expanded="false">Do you issue Certificates of Compliance (CoC)?</button>
+        <div class="panel"><p class="pb-4 text-slate-700">Yes, for qualifying works in line with plumbing standards and manufacturer requirements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas Served -->
+  <section id="areas" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">Areas We Cover</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-slate-700">
+        <span class="px-3 py-2 rounded-lg bg-white border border-slate-200">Pietermaritzburg CBD</span>
+        <span class="px-3 py-2 rounded-lg bg-white border border-slate-200">Scottsville</span>
+        <span class="px-3 py-2 rounded-lg bg-white border border-slate-200">Hayfields</span>
+        <span class="px-3 py-2 rounded-lg bg-white border border-slate-200">Pelham</span>
+        <span class="px-3 py-2 rounded-lg bg-white border border-slate-200">Cascades</span>
+        <span class="px-3 py-2 rounded-lg bg-white border border-slate-200">Hilton</span>
+        <span class="px-3 py-2 rounded-lg bg-white border border-slate-200">Howick</span>
+        <span class="px-3 py-2 rounded-lg bg-white border border-slate-200">Edendale</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">About Fastmove Plumbing</h2>
+      <p class="mt-4 text-lg text-slate-700">Fastmove Plumbing combines rapid response with tidy, standards‑compliant workmanship. We isolate problems quickly, fix cleanly, and leave your space better than we found it. Values: <span class="font-medium">Speed</span>, <span class="font-medium">Clean Work</span>, <span class="font-medium">Transparency</span>, <span class="font-medium">Safety</span>, <span class="font-medium">Compliance</span>.</p>
+      <div class="mt-6 p-5 bg-accent rounded-2xl shadow-card">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary grid place-items-center text-white">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <div class="font-heading text-highlight">Joachim Ruzwe</div>
+            <div class="text-sm text-slate-600">Director</div>
+          </div>
+        </div>
+        <blockquote class="mt-3 text-slate-700 text-sm">“Fast, clean and compliant — done right the first time.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book / Contact CTA -->
+  <section id="book" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">Book or Get a Quote</h2>
+      <div class="mt-6 grid lg:grid-cols-2 gap-8">
+        <div class="space-y-3">
+          <p class="text-slate-700"><i class="fa-solid fa-phone text-primary"></i> <a class="underline hover:text-primary" href="tel:+27790485777">+27 79 048 5777</a></p>
+          <p class="text-slate-700"><i class="fa-brands fa-whatsapp text-primary"></i> <a class="underline hover:text-primary" href="https://wa.me/27790485777" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+          <p class="text-slate-700"><i class="fa-solid fa-envelope text-primary"></i> <a class="underline hover:text-primary" href="mailto:hello@fastmoveplumbing.co.za">hello@fastmoveplumbing.co.za</a></p>
+          <p class="text-slate-700"><i class="fa-solid fa-clock text-primary"></i> 24/7 • After‑hours surcharge applies</p>
+        </div>
+        <div>
+          <div class="bg-white rounded-2xl p-6 shadow-card border border-slate-200">
+            <form class="grid gap-3" method="get" action="#">
+              <input class="px-3 py-2 rounded-lg border border-slate-300" id="full_name" name="full_name" placeholder="Full Name" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" id="phone" name="phone" placeholder="Phone" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" id="email" name="email" placeholder="Email" />
+              <input class="px-3 py-2 rounded-lg border border-slate-300" id="address" name="address" placeholder="Site Address" />
+              <select class="px-3 py-2 rounded-lg border border-slate-300" id="service" name="service">
+                <option value="">Select Service</option>
+                <option>Emergency Plumbing</option>
+                <option>Leak Detection</option>
+                <option>Drain Unblocking</option>
+                <option>Geyser Repair/Replace</option>
+                <option>Bathroom/Kitchen Plumbing</option>
+                <option>Pipes & PRV/Valves</option>
+                <option>Water Tanks & Booster Pumps</option>
+                <option>Commercial Maintenance</option>
+              </select>
+              <textarea class="px-3 py-2 rounded-lg border border-slate-300" id="details" name="details" rows="3" placeholder="Details"></textarea>
+              <button class="inline-flex items-center justify-center gap-2 bg-primary text-white px-4 py-2 rounded-xl2 hover:bg-secondary" type="submit">
+                <i class="fa-regular fa-paper-plane"></i> Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="section-divider font-heading text-3xl text-highlight">Contact & Location</h2>
+      <div class="mt-6 grid lg:grid-cols-2 gap-8">
+        <div class="space-y-3">
+          <p class="text-slate-700"><i class="fa-solid fa-location-dot text-primary"></i> 19 Syndicate, Pietermaritzburg, 3201</p>
+          <p class="text-slate-700"><i class="fa-solid fa-phone text-primary"></i> <a class="underline hover:text-primary" href="tel:+27790485777">+27 79 048 5777</a></p>
+          <p class="text-slate-700"><i class="fa-solid fa-envelope text-primary"></i> <a class="underline hover:text-primary" href="mailto:hello@fastmoveplumbing.co.za">hello@fastmoveplumbing.co.za</a></p>
+          <div class="flex gap-3 pt-2">
+            <a href="https://wa.me/27790485777" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-xl2 hover:bg-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Now</a>
+            <a href="https://maps.google.com/maps?q=19%20Syndicate%2C%20Pietermaritzburg%2C%203201&output=embed" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl2 border border-primary text-primary hover:bg-primary/10"><i class="fa-solid fa-map"></i> Get Directions</a>
+          </div>
+        </div>
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-card">
+          <iframe title="Map" class="w-full h-full" loading="lazy" src="https://maps.google.com/maps?q=19%20Syndicate%2C%20Pietermaritzburg%2C%203201&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="text-sm text-slate-600">© <span id="year"></span> Fastmove Plumbing. All rights reserved.</div>
+        <div class="flex items-center gap-4 text-slate-600">
+          <a href="#services" class="hover:text-primary">Services</a>
+          <a href="#pricing" class="hover:text-primary">Pricing</a>
+          <a href="#faqs" class="hover:text-primary">FAQs</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/27790485777" target="_blank" rel="noopener" class="fixed bottom-4 right-4 inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-lg hover:bg-secondary" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+  </a>
+
+  <script>
+    // Mobile nav toggle
+    const btn = document.getElementById('menuBtn');
+    const mnav = document.getElementById('mnav');
+    if (btn) btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      mnav.classList.toggle('hidden');
+    });
+
+    // Accordion
+    document.querySelectorAll('.accordion').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const panel = btn.nextElementSibling;
+        if (panel) {
+          panel.style.maxHeight = expanded ? '0' : panel.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
